@@ -1,15 +1,14 @@
 package com.rta.watchstore.redis;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import redis.embedded.RedisServer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.io.IOException;
 
-/**
- * Created by rparry on 2016-07-31.
- */
+@Component
 public class EmbededRedis {
 
     @Value("${spring.redis.port}")
@@ -21,6 +20,7 @@ public class EmbededRedis {
     public void startRedis() throws IOException {
         redisServer = new RedisServer(this.redisPort);
         redisServer.start();
+
     }
 
     @PreDestroy
