@@ -1,0 +1,3 @@
+dependencies {
+    compile group: 'com.github.kstyrc', name: 'embedded-redis', version: embedded_redis_version
+}
