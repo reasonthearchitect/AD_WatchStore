@@ -8,12 +8,12 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StringRedisTemplateBean {
+public class RedisTemplateConfig {
 
     @Autowired
     RedisConnectionFactory redisConnectionFactory;
 
-    @Bean
+    @Bean(name = "redisTemplate")
     public RedisTemplate<String, String> getStringRestTemplate() {
         RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
 
