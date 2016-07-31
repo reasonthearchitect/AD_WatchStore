@@ -15,7 +15,7 @@ public class WatchingCarRest {
 
     @Autowired private IWatchingCarRepo watchingCarRepo;
 
-    @RequestMapping(value = "/for/{name}/carid/{carid}",
+    @RequestMapping(value = "/for/{name}/carvin/{carid}",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> watch(@PathVariable String name, @PathVariable String carid) {
