@@ -14,14 +14,9 @@ liquibase:
     context: test
 
 spring:
-    data:
-        elasticsearch:
-            cluster-name:
-            cluster-nodes:
-            properties:
-                path:
-                  logs: target/elasticsearch/log
-                  data: target/elasticsearch/data
+    redis:
+        host: localhost
+        port: 6479
 metrics:
     jmx.enabled: false
 

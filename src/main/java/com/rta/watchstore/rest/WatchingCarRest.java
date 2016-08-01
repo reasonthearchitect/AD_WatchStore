@@ -23,6 +23,14 @@ public class WatchingCarRest {
         return ResponseEntity.ok().build();
     }
 
+    @RequestMapping(value = "/remove/{name}/carvin/{carvin}",
+            method = RequestMethod.DELETE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> unwatch(@PathVariable String name, @PathVariable String carvin) {
+        this.watchingCarRepo.delete(name, carvin);
+        return ResponseEntity.ok().build();
+    }
+
     @RequestMapping(value = "/getwatchlist/{name}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)

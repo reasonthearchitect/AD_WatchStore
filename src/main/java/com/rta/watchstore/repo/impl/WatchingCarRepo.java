@@ -26,7 +26,7 @@ public class WatchingCarRepo implements IWatchingCarRepo {
 
     @Override
     public void delete(String name, String carId) {
-
+        this.redisTemplate.opsForList().remove(name, 1, carId);
     }
 }
 
