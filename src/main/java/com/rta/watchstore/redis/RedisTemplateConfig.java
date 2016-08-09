@@ -21,7 +21,6 @@ public class RedisTemplateConfig {
 
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         redisTemplate.afterPropertiesSet();
-        //System.out.println("&&&&&&&&&&&&&&&&&&&&&   " + redisTemplate.getConnectionFactory().getConnection().ping());
         return redisTemplate;
     }
 }

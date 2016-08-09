@@ -3,7 +3,7 @@ node {
     git url: 'https://github.com/reasonthearchitect/AD_WatchStore.git'
 
     stage 'Build'
-    sh "./gradlew clean build"
+    sh "./gradlew clean build sonarqube"
     //step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/TEST-*.xml'])
 
     stage 'BuildRunDocker'
